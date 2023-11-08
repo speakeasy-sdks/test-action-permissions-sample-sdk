@@ -1,5 +1,5 @@
 # Drinks
-(*Drinks*)
+(*.Drinks*)
 
 ## Overview
 
@@ -57,7 +57,10 @@ func main() {
 ### Response
 
 **[*operations.GetDrinkResponse](../../models/operations/getdrinkresponse.md), error**
-
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.APIError | 5XX                | application/json   |
+| sdkerrors.SDKError | 400-600            | */*                |
 
 ## ListDrinks
 
@@ -89,7 +92,7 @@ func main() {
         log.Fatal(err)
     }
 
-    if res.Drinks != nil {
+    if res.Classes != nil {
         // handle response
     }
 }
@@ -106,4 +109,7 @@ func main() {
 ### Response
 
 **[*operations.ListDrinksResponse](../../models/operations/listdrinksresponse.md), error**
-
+| Error Object       | Status Code        | Content Type       |
+| ------------------ | ------------------ | ------------------ |
+| sdkerrors.APIError | 5XX                | application/json   |
+| sdkerrors.SDKError | 400-600            | */*                |
